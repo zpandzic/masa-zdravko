@@ -1,71 +1,188 @@
 <!DOCTYPE html>
 <html lang="hr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vjenčanje Maša & Zdravko</title>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&family=Dancing+Script&display=swap");
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #f8f8f8;
+        color: #333;
+        text-align: center;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+      .container {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        max-width: 600px;
+        width: 100%;
+      }
+      h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 3em;
+        margin-bottom: 0;
+        color: #5a5a5a;
+      }
+      h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 2em;
+        margin-top: 0;
+        color: #5a5a5a;
+      }
+      p {
+        font-size: 1.2em;
+        line-height: 1.6;
+      }
+      .date {
+        font-size: 1.5em;
+        margin: 20px 0;
+        color: #5a5a5a;
+      }
+      .verse {
+        font-style: italic;
+        margin: 20px 0;
+        color: #7a7a7a;
+      }
+      .schedule {
+        margin: 40px 0;
+      }
+      .schedule div {
+        margin: 10px 0;
+        font-size: 1.2em;
+      }
+      .schedule div span {
+        cursor: pointer;
+        text-decoration: underline;
+        transition: color 0.3s ease;
+      }
+      .schedule div span:hover {
+        color: #666;
+      }
+      .contact {
+        margin-top: 40px;
+        font-size: 1.1em;
+        color: #333;
+      }
+      .contact p {
+        margin: 5px 0;
+      }
+      .numbers {
+        margin-top: 20px;
+      }
+      .numbers a {
+        color: #333;
+        text-decoration: underline;
+        transition: color 0.3s ease;
+      }
+      .numbers a:hover {
+        color: #666;
+        text-decoration: underline;
+      }
+      .handwritten {
+        font-family: "Dancing Script", cursive;
+        font-size: 1.5em;
+        color: #5a5a5a;
+        margin-top: 20px;
+      }
+      @media (max-width: 600px) {
         body {
-            font-family: 'Arial, sans-serif';
-            background-color: #f8f8f8;
-            color: #333;
-            text-align: center;
-            padding: 20px;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          background-color: #fff;
+        }
+        .container {
+          box-shadow: none;
+          border-radius: 0;
+          padding: 10px;
+          background-color: #fff;
+          max-width: 100%;
+          width: 100%;
+          margin: 0;
         }
         h1 {
-            font-size: 3em;
-            margin-bottom: 0;
+          font-size: 2em;
         }
         h2 {
-            font-size: 2em;
-            margin-top: 0;
+          font-size: 1.5em;
         }
         p {
-            font-size: 1.2em;
+          font-size: 1em;
         }
         .date {
-            font-size: 1.5em;
-            margin: 20px 0;
+          font-size: 1.2em;
         }
         .verse {
-            font-style: italic;
-            margin: 20px 0;
-        }
-        .schedule {
-            margin: 40px 0;
+          font-size: 1em;
         }
         .schedule div {
-            margin: 10px 0;
-            font-size: 1.2em;
+          font-size: 1em;
         }
         .contact {
-            margin-top: 40px;
-            font-size: 1.1em;
+          font-size: 1em;
         }
-        .map-link a {
-            color: #0066cc;
-            text-decoration: none;
+        .handwritten {
+          font-size: 1.2em;
         }
-        .map-link a:hover {
-            text-decoration: underline;
-        }
+      }
     </style>
-</head>
-<body>
-    <h1>Maša & Zdravko</h1>
-    <h2>18/10/2024</h2>
-    <p class="verse">„...NAĐOH ONOG KOGA LJUBI DUŠA MOJA...” (PJ 3, 1-4A)</p>
-    <div class="schedule">
-        <div>13:30 - <a href="https://maps.app.goo.gl/7nHiTc63FQUnvyH38" target="_blank">Okupljanje kod mladoženje</a></div>
-        <div>15:00 - <a href="https://maps.app.goo.gl/SZmcrzZKxLorrHsd7" target="_blank">Okupljanje kod mlade</a></div>
-        <div>17:00 - Vjenčanje u crkvi Gospe od Karmela</div>
-        <div>20:00 - Svadbeni salon Hotel Otok, Grude</div>
-    </div>
-    <div class="contact">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Maša & Zdravko</h1>
+      <h2>18/10/2024</h2>
+      <p class="verse">„...nađoh onog koga ljubi duša moja...” (PJ 3, 1-4A)</p>
+      <div class="schedule">
+        <div>
+          13:30 -
+          <span onclick="openLink('https://maps.app.goo.gl/7nHiTc63FQUnvyH38')"
+            >Okupljanje kod mladoženje</span
+          >
+        </div>
+        <div>
+          15:00 -
+          <span onclick="openLink('https://maps.app.goo.gl/SZmcrzZKxLorrHsd7')"
+            >Okupljanje kod mlade</span
+          >
+        </div>
+        <div>
+          17:00 -
+          <span onclick="openLink('https://maps.app.goo.gl/5VK53jCF5zwug9QF9')"
+            >Vjenčanje u crkvi Gospe od Karmela</span
+          >
+        </div>
+        <div>
+          20:00 -
+          <span onclick="openLink('https://maps.app.goo.gl/mEPFYvX9vSn8iUuKA')"
+            >Svadbeni salon Hotel Otok, Grude</span
+          >
+        </div>
+      </div>
+      <div class="contact">
         <p>Molimo vas svoj dolazak potvrdite do 30.9.2024.</p>
-        <p>Maša Jakić: 092 313 3809</p>
-        <p>Zdravko Pandžić: 099 746 5344</p>
+        <div class="numbers">
+          <p>Maša Jakić: <a href="tel:0923133809">092 313 3809</a></p>
+          <p>Zdravko Pandžić: <a href="tel:0997465344">099 746 5344</a></p>
+        </div>
+      </div>
+      <p class="handwritten">Radujemo se vašem dolasku!</p>
     </div>
-    <p>Radujemo se vašem dolasku!</p>
-</body>
+
+    <script>
+      function openLink(url) {
+        window.open(url, "_blank");
+      }
+    </script>
+  </body>
 </html>
